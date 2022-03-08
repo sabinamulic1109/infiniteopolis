@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"); /*koristi se font Poppins*/
+
+:root{
+    --gradient: linear-gradient(90deg, #FFFFFB, #5B5F97); /*ombre prelaz boja*/
+}
+*{
+font-family: 'Poppins', sans-serif; /* font je Poppins,margine 0,bez ivica,tekst ima pocetna velika slova*/
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+border: none;
+outline: none;
+text-decoration: none;
+text-transform: capitalize;
+transition: all .2s linear;
+}
+ 
+
+
+ *::selection{
+    background:#B8B8D1;
+    color:  #FFFFFB;
+   
+ }
+ html{
+    font-size: 58%; /*velicina fonta*/
+    overflow-x: hidden;
+ }
+
+ html::-webkit-scrollbar{ /*dugme za skrolanje na dolje sirine 1.5rem*/
+    width: 1.5rem;
+
+ }
+  html::-webkit-scrollbar-track{ /*boja trake skrolanja*/
+    background:#FFFFFB ;
+    
+ }
+ html::-webkit-scrollbar-thumb{
+    background: linear-gradient(#5B5F97, #FFFFFB); }/*boja dugmeta*/
+
+  body{
+        height: 80rem;  /*visina*/
+        background: url('slike/139.jpg'); /*slika pozadine*/
+        background-size: cover; /*raspon*/
+font-family:'Poppins', sans-serif;
+    }
+
+#text{
+
+		height: 40px; /*visina*/
+		border-radius: 12px; /*radijus granica*/
+		padding: 4px;
+		border: solid thin #aaa; 
+		width: 100%;
+font-family:'Poppins', sans-serif;
+	}
+
+	#button{
+
+		padding: 1rem 3rem;
+    font-size: 2rem; /*velicina fonta*/
+    color: #fff;
+    background: #5B5F97; /*pozadina*/
+    margin-top: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0.1rem .3rem rgba(0, 0, 0, .3);
+    vertical-align: center; /*vertikalno poravnanje*/
+    align-content: center;
+    position: relative;
+    z-index: 0;
+font-family:'Poppins', sans-serif;
+    overflow: hidden;
+	}
+
+.button::before{
+    content: '';
+    position: absolute; 
+    top: -1rem;
+    left:-100%;
+    background: #fff;
+    height: 150%;
+    width: 20%;
+    transform: rotate(25deg);
+    z-index: -1;
+
+}
+
+.button:hover::before{
+    transition: .5s linear; /*linearni prelaz preko dugmeta*/
+    left: 120%;
+
+}
+
+input{
+	text-transform: none;
+font-family:'Poppins', sans-serif;
+}
+div .a{
+	font-size: 20px; /*link tag u divu, velicina fonta 20px,margina 10px*/
+	margin: 10px;
+	color: white;
+}
+
+	#box{
+
+		background:linear-gradient(#5B5F97, #FFFFFB);/*boja pozadine je prelaz dvije boje*/
+		margin: auto;
+		width: 300px;
+		padding: 20px;
+		align-content: center;
+font-family:'Poppins', sans-serif;
+	}
+	h3 .reg{ /*font h3 definisana velicina,boja,razmak i font*/
+    font-size: 3rem;
+    color:white;
+    padding:1rem 0;
+font-family:'Poppins', sans-serif;
+}
+
+.footer{
+    background:#5B5F97;/*pozadina podnozja*/
+}
+
+.footer .box-container{ /*element podnozja*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{/*dio u elementu podnozja*/
+    margin:1.5rem;
+    text-align: center;
+    flex:1 1 25rem;
+}
+
+.footer .box-container .box h3{/*font u dijelu elementa podnozja*/
+    font-size: 2.5rem;
+    color:#fff;
+    padding:1rem 0;
+}
+
+.footer .box-container .box p{/*paragraf u dijelu elementa podznoja*/
+    font-size: 1.7rem;
+    color:#eee;
+    padding:.7rem 0;
+}
+
+.footer .box-container .box p i{/*klase font awesome ikone*/
+    padding-right: .5rem;
+    color:#f39c12;
+}
+
+.footer .box-container .box a{/*linkovi*/
+    font-size: 1.8rem;
+    display: block;
+    padding:.5rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a:hover{/*nakon prelaska preko linka on se podcrta*/
+    text-decoration: underline;
+}
+
+.footer .credit{ /*informacije*/
+    padding:2rem 1rem;
+    font-size: 2rem;
+    color:#5B5F97;
+    background:white;
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 9rem;
+}
+
+.footer .credit a{/*linkovi u informacijama*/
+    color:#f39c12
+}
+
+form i { /*ikone*/
+    margin-left: -30px;
+    cursor: pointer;
+}

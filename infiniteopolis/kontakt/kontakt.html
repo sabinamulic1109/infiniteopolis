@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html >
+
+  <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KONTAKT</title>
+    <link rel="stylesheet" href="style.css" /> <!--linkovi za font i css skriptu-->
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    
+    <div class="container">
+      <span class="big-circle"></span>
+      
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title"><p class="boja">Imate li pitanja?</p></h3><!--infomracije o radnom vremenu, adresi, mailu i tel.broju-->
+          <p class="text">
+          Slobodno nas kontaktirajte u vezi bilo koje teme. Naše stručno osoblje odgovarat će na vaše upite svakog radnog dana od 08:00h do 16:00h.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Bosanska br.5  Bihać</p>
+            </div>
+            <div class="information">
+              <i class="fas fa-envelope"></i> 
+              <p>neki@email.com</p>
+            </div>
+            <div class="information">
+              <i class="fas fa-phone"></i>
+              <p>123-456-789</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Potražite nas na društvenim mrežama</p><!--ikone socijalnih mreza-->
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <br>
+           <a href="http://localhost/infiniteopolis/index.php#home">
+                <i class="fas fa-arrow-circle-left fa-2x" title="Povratak na početnu stranicu."></i>
+              </a>
+        </div>
+        <style>
+@media only print {
+  body { visibility: hidden; } /*css kod za određen dio printanja kod window.print()*/
+  .contact-form { visibility: visible;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  height: 10px;
+   }
+
+
+}
+
+
+</style>
+        <div class="contact-form"  >
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="mailto:sabina.mulic@hotmail.com" method="post" enctype="text/plain" onsubmit="return confirm('Da li ste sigurni da želite poslati poruku?');" 
+          onreset="return confirm('Da li ste sigurni da želite poništiti sve unose?');"><!--confirm prozor nakon submit dugmeta-->
+            <h3 class="title">Kontaktirajte nas</h3>
+            <div class="input-container" id="input" > <!--odabir oslovljavanja,padajuca lista-->
+              <select size="1" class="input">
+                <option></option>
+                <option>Gospođa</option>
+                <option>Gospođica</option>
+                <option>Gospodin</option>
+
+              </select>
+              <label for="">Oslovljavanje</label>
+              <span>Oslovljavanje</span>
+            </div>
+            <div class="input-container">
+              <input type="text" class="input" name="Ime i prezime: " pattern="[a-zA-Z'-'\s]*+[" title="Unesite ime i prezime samo slovima." 
+              required="required" oninvalid="this.setCustomValidity('Molimo, provjerite svoj unos! Ime i prezime se mogu unijeti samo slovima.')" onchange="this.setCustomValidity('')"/>
+              <label for="">Ime i prezime</label><!--ime i prezime se moze unijeti samo slovima i moguc je razmak, polje se obavezno-->
+              <span>Ime i prezime</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="Email:" class="input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="required" oninvalid="this.setCustomValidity('Molimo, ispunite ovo polje isključivo ispravnim e-mailom!')" onchange="this.setCustomValidity('')"/>
+              <label for="">E-mail</label><!--unos maila je obavezan i mora ispostovati formu maila, tj validaciju-->
+              <span>E-mail</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="Broj mobitela: " class="input" pattern="[0-9]+" title="Unesite samo brojeve."/>
+              <label for="">Tel broj</label><!--broj mobitela se moze unijeti samo brojevima-->
+              <span>Tel broj</span>
+            </div>
+              <p class="t">Oblast interesovanja?</p><!--oblast interesovanja se odabije checkboxom-->
+
+ <div class="input-container">
+ <table>
+  <tr>
+    <td>Razvojna psihologija</td><td><input type="checkbox" name="Oblast interesovanja 1: " /></td></tr>
+    <tr><td>Sportska psihologija</td><td><input type="checkbox" name="Oblast interesovanja 2: " /></td></tr>
+ <tr><td>Socijalna psihologija</td><td><input type="checkbox" name="Oblast interesovanja 3: "/></td></tr>
+ <tr><td>Poslovna psihologija</td><td><input type="checkbox" name="Oblast interesovanja 4: " /></td></tr></table>
+
+              
+            </div>
+
+            <div class="input-container textarea"><!--polje za unos poruke, obavezno polje-->
+              <textarea name="poruka" class="input" maxlength="100" 
+              required="required" oninvalid="this.setCustomValidity('Molimo, napišite željenu poruku prije slanja!')" onchange="this.setCustomValidity('')"></textarea>
+              <label for="">Napišite poruku...</label>
+              <span>Napišite poruku...</span>
+            </div>
+             <div class="input-container">
+              <p class="t">Ocijenite iskustvo na našoj stranici</p><!--radio buttons za ocjenu-->
+              <input type="radio"  name="x" value="jedan"/><checked="checked"><i class="fas fa-star"></i></input> <br>
+      <input type="radio"  name="x" value=" dva" /><i class="fas fa-star"></i><i class="fas fa-star"></i></input> <br>
+      <input type="radio"  name="x" value="tri"/><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></input> <br>
+      <input type="radio"  name="x" value=" četiri" /><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></input> <br>
+      <input type="radio"  name="x" value="pet" /><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <checked="checked"></input></div>
+            <input type="submit" value="Pošalji" class="btn" onClick="confSubmit(this.form);"/><!--submit dugme-->
+            <input type="reset" value="Poništi" class="btn" onclick="ProvjeraBrisanja();"> <!--dugme ponistavanja unesenih podataka-->
+                      <button class="btn" onclick="printInDiv()">Print</button><!--dugme za printanje-->
+                      
+
+          </form>
+        </div>
+      </div>
+    </div>
+<div id="printableArea" style="visibility: hidden;"> </div>
+
+    <script src="skripta.js"></script>
+  </body>
+</html>
